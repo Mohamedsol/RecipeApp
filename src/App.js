@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './Component/Form'
+import Recipes from './Component/Recipes'
 
 class App extends Component {
 
@@ -27,9 +28,7 @@ class App extends Component {
           <h1>Recipe App</h1>
         </header>
         <Form recipeHandle={this.recipeHandle}/>
-        {this.state.recipes.map( (recipe) => {
-          return <div>{recipe.title}</div>
-        }) }
+        <Recipes recipes={this.state.recipes}/>
       </div>
     );
  }
